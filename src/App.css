@@ -12,6 +12,18 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
+  
+  
+  
+}
+
+.maintrue {
+  transition: all .5s;
+  
+}
+
+.mainfalse {
+  margin-left: -20px;
 }
 
 .outer {
@@ -63,8 +75,34 @@ body {
   background-color: white;
 }
 
+@keyframes slidein {
+  from {
+    right: 100%
+  }
+
+  to {
+    right: 0;
+  }
+}
+
+.true {
+  animation: slidein .5s;
+  transition: all .5s;
+  width: 260px;
+}
+
+.false {
+  
+  animation: slidein .5s reverse;
+  transition: all .5s;
+  width: 0;
+  transform: translate(-260px);
+}
+
+
+
 .nav-bar {
-  width:  250px;
+  position: relative;
   height: 100%;
   background-image: linear-gradient(rgb(75,139,248),rgb(63,88,244));
   position: relative;

@@ -1,10 +1,13 @@
 import React from 'react'
 
-const Header = () => {
+const Header = (props) => {
+
+    
+
     return (
         <div className="header">
             <div className="left-header">
-                <div className="menu-icon">
+                <div onClick={props.onClick} className="menu-icon">
                     <div className="menu-icon-bar"></div>
                     <div className="menu-icon-bar-short"></div>
                     <div className="menu-icon-bar"></div>

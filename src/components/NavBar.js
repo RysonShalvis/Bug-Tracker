@@ -1,8 +1,8 @@
 import React from 'react'
 
-const NavBar = () => {
+const NavBar = (props) => {
     return (
-        <div className="nav-bar">
+        <div className={`nav-bar ${props.opened}`}>
             <div className="nav-bar-wrapper">
                 <div className="account">
                     <img src="" alt="Ryso" className="account-picture"/>
