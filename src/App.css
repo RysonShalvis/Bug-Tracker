@@ -1,3 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(30,30,47);
+  margin: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.outer {
+  display: flex;
+  flex-direction: row;
+  
+}
+
 .header {
   display: flex;
   flex-direction: row;
@@ -6,6 +28,7 @@
   height: 60px;
   width: 100%;
   background-color: rgb(30,30,47);
+  margin: 0;
 }
 
 .left-header {
@@ -38,4 +61,58 @@
   margin: 3px 50px;
   border-radius: 5px;
   background-color: white;
+}
+
+.nav-bar {
+  width:  250px;
+  height: 100%;
+  background-image: linear-gradient(rgb(75,139,248),rgb(63,88,244));
+  position: relative;
+  padding: 10px;
+  
+}
+
+.nav-bar-wrapper {
+  margin: 0 20px;
+}
+
+.account {
+  display: flex;
+  margin: 10px 0px;
+}
+
+.account-picture, .nav-icon {
+  margin-right: 10px;
+}
+
+.underline {
+  height: 1px;
+  background-color: white;
+  margin: 7px;
+}
+
+.nav-link {
+  display: flex;
+  color: white;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.nav-name {
+  color: white;
+}
+
+.dashboard {
+  background-color: rgb(30,30,47);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.ticket-filter {
+  height: 300px;
+  margin: 15px 15px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  background-color: rgb(38,41,61);
 }
