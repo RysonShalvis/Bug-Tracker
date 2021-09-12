@@ -26,7 +26,7 @@ function Home() {
       <NavBar opened={opened} />
       </div>
       <div className={`main main${opened}`}>
-        <Header onClick={handleClick} />
+        <Header opened={opened} onClick={handleClick} />
         <Dashboard/>
       </div>
   </div>

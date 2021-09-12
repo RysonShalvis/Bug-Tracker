@@ -1,4 +1,5 @@
 import React from 'react';
+import Home from './Home';
 import { useAuth0 } from '@auth0/auth0-react';
 
 const Login = () => {
@@ -15,9 +16,7 @@ const Login = () => {
                 
     } else if (isAuthenticated) {
         return (
-            <button onClick={() => logout()}>
-                Logout
-            </button> 
+            <Home />
         )
     }
 }

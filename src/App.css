@@ -49,11 +49,48 @@ body {
   align-items: center;
 }
 
+.menu-icon {
+  position: relative;
+  margin: 0px;
+}
+
+.menu-icon-true {
+  
+}
+
+
 .menu-icon-bar {
   height: 1px;
   width: 22px;
   background-color: white;
   margin: 7px 50px;
+}
+
+.menu-icon-bar-one-true {
+  transform: rotate(225deg);
+  position: absolute;
+  top: -8px;
+  left: -30px;
+  transition: all .5s;
+}
+
+.menu-icon-bar-two-true {
+  transform: rotate(-225deg);
+  position: absolute;
+  top: -8px;
+  left: -30px;
+  transition: all .5s;
+}
+
+.menu-icon-bar-short-true {
+  width: 0;
+  display: none;
+  transition: all .5s;
+}
+
+.menu-icon-bar-two-false, .menu-icon-bar-one-false {
+  transition: all .5s;
+
 }
 
 .menu-icon-bar-short {
@@ -63,8 +100,24 @@ body {
   margin: 7px 50px;
 }
 
+.nav-to-true {
+  margin-left: 90px;
+}
+
 .nav-to {
   color: white;
+  
+}
+
+.right-header {
+  display: flex;
+  align-items: center;
+}
+
+.profile-picture {
+  height: 35px;
+  border-radius: 35px;
+  margin-right: 40px;
 }
 
 .dot {
@@ -117,10 +170,21 @@ body {
 .account {
   display: flex;
   margin: 10px 0px;
+  align-items: center;
 }
 
 .account-picture, .nav-icon {
   margin-right: 10px;
+}
+
+.account-picture {
+  height: 30px;
+  border-radius: 30px;
+}
+
+.account-name {
+  color: white;
+  font-size: 15px;
 }
 
 .underline {
@@ -134,16 +198,22 @@ body {
   color: white;
   margin-bottom: 40px;
   margin-top: 40px;
+  align-items: center;
 }
 
 .nav-name {
   color: white;
 }
 
+.nav-icon {
+  height: 30px;
+}
+
 .dashboard {
   background-color: rgb(30,30,47);
   height: 100%;
   margin: 0;
+  margin-top: -10px;
   padding: 0;
 }
 
