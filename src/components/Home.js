@@ -1,10 +1,11 @@
-import './App.css';
-import Dashboard from './components/Dashboard';
-import Header from './components/Header';
-import NavBar from './components/NavBar';
+import Dashboard from './Dashboard';
+import Header from './Header';
+import NavBar from './NavBar';
 import { useState } from 'react';
+import { useAuth0 } from '@auth0/auth0-react';
+function Home() {
 
-function App() {
+  const { user, isAuthenticated } = useAuth0();
 
   const [opened, setOpened] = useState(false);
 
@@ -18,8 +19,8 @@ function App() {
   }
 
   return (
-    
-  <div className="outer" >
+    isAuthenticated && (
+      <div className="outer" >
       <div >
 
       <NavBar opened={opened} />
@@ -29,10 +30,8 @@ function App() {
         <Dashboard/>
       </div>
   </div>
-
-
-
+    )
   );
 }
 
-export default App;
+export default Home;
