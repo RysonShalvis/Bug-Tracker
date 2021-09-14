@@ -3,7 +3,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import dashboardIcon from '../dashboard-icon.png';
 
 const NavBar = (props) => {
-    const { user, isAuthenticated, logout } = useAuth0();
+    const { user, logout } = useAuth0();
     return (
         <div className={`nav-bar ${props.opened}`}>
             <div className="nav-bar-wrapper">
