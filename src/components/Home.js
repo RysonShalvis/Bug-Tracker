@@ -55,11 +55,14 @@ function Home() {
   return (
     isAuthenticated && (
       <div className="outer" >
+        
       <div >
 
       <NavBar opened={opened} />
       </div>
+      
       <div className={`main main${opened}`}>
+        <DesktopHeader />
         <Header opened={opened} onClick={handleClick} />
         <Dashboard/>
       </div>

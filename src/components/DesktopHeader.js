@@ -9,7 +9,7 @@ const DesktopHeader = () => {
         isAuthenticated && (
             <div className="desktop-header">
             <div className="left-header-dsktp">
-                <div className="nav-to-dsktp">DASHBOARD</div>
+                <div className="nav-to">DASHBOARD</div>
             </div>
             <div className="right-header-dsktp">
                 <img src={user.picture} alt={user.name} className="profile-picture" />

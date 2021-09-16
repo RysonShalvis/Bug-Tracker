@@ -8,7 +8,7 @@ const Profile = () => {
     return (
         isAuthenticated && (
             <div style={{color: 'white'}}>
-                {user.name}
+                
             </div>
         )
     )

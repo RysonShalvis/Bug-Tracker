@@ -17,7 +17,7 @@ const Login = () => {
     } else if (isAuthenticated) {
         return (
             <>
-                <DesktopHeader />
+                
                 <Home />
             </>
         )
