@@ -5,8 +5,11 @@ import NavBar from './NavBar';
 import { useState, useEffect } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import users from '../userObject';
-function Home() {
+function Home (props) {
 
+  const [opened, setOpened] = useState(false);
+  const [userType, setUserType] = useState('');
+  const [userObject, setUserObject] = useState(false);
   const { user, isAuthenticated } = useAuth0();
 
   const createUser = (newUser) => {
@@ -16,10 +19,13 @@ function Home() {
     }
   }
 
-  const [opened, setOpened] = useState(false);
-  const [userType, setUserType] = useState('');
+
+  
   useEffect(() => {
-    let i;
+    
+    if (isAuthenticated) {
+      setUserObject(user);
+      let i;
     for (i = 0;i < users.length; i++) {
       if (users[i].sub === user.sub) {
         setUserType(users[i].userType);
@@ -34,12 +40,27 @@ function Home() {
         break;
       }
     };
+    } else {
+      if (props.userType === 'Admin') {
+        setUserObject(users[0]);
+      } else if (props.userType === 'Project Manager') {
+        setUserObject(users[1]);
+      } else if (props.userType === 'Developer') {
+        setUserObject(users[2]);
+      } else if (props.userType === 'Submitter') {
+        setUserObject(users[3]);
+      } else {
+        setUserObject(users[0]);
+      }
+      
+    }
+    
     /*if () {
 
     }
      */
     
-  })
+  }, [])
   
   
 
@@ -52,23 +73,29 @@ function Home() {
         console.log(opened);
   }
 
-  return (
-    isAuthenticated && (
-      <div className="outer" >
+    if (userObject) {
+      return (
+    
+        <div className="outer" >
+          
+        <div >
+  
+        <NavBar user={userObject} opened={opened} />
+        </div>
         
-      <div >
-
-      <NavBar opened={opened} />
-      </div>
+        <div className={`main main${opened}`}>
+          <DesktopHeader user={userObject} />
+          <Header user={userObject} opened={opened} onClick={handleClick} />
+          <Dashboard user={userObject}/>
+        </div>
+    </div>
       
-      <div className={`main main${opened}`}>
-        <DesktopHeader />
-        <Header opened={opened} onClick={handleClick} />
-        <Dashboard/>
-      </div>
-  </div>
-    )
-  );
+    );
+    }
+
+    return <></>
+
+  
 }
 
 export default Home;

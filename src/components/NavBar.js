@@ -3,14 +3,14 @@ import { useAuth0 } from '@auth0/auth0-react';
 import dashboardIcon from '../dashboard-icon.png';
 
 const NavBar = (props) => {
-    const { user, logout } = useAuth0();
+    const { logout } = useAuth0();
     return (
         <div className="nav-ctn" >
             <div className={`nav-bar ${props.opened}`}>
                 <div className="nav-bar-wrapper">
                     <div className="account">
-                        <img src={user.picture} alt={user.name} className="account-picture"/>
-                        <div className="account-name">{user.name.toUpperCase()}</div>
+                        <img src={props.user.picture} alt={props.user.name} className="account-picture"/>
+                        <div className="account-name">{props.user.name.toUpperCase()}</div>
                     </div>
                 </div>
                 <div className="underline"></div>

@@ -1,9 +1,7 @@
 import React from 'react';
-import { useAuth0 } from '@auth0/auth0-react';
 
 const Header = (props) => {
-
-    const { user } = useAuth0();    
+   
 
     return (
         <div className="header">
@@ -16,7 +14,7 @@ const Header = (props) => {
                 <div className={`nav-to nav-to-${props.opened}`}>DASHBOARD</div>
             </div>
             <div className="right-header">
-                <img src={user.picture} alt={user.name} className="profile-picture" />
+                <img src={props.user.picture} alt={props.user.name} className="profile-picture" />
                 {/*<div className="three-dots">
                     <div className="dot"></div>
                     <div className="dot"></div>
