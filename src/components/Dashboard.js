@@ -12,6 +12,9 @@ const Dashboard = () => {
             <div className="ticket-filter">
                 
             </div>
+            <div className="ticket-filter">
+                
+            </div>
         </div>
     )
 }

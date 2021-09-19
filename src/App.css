@@ -242,8 +242,13 @@ body {
   }
   
   .dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-left: 300px;
     margin-right: 20px;
+    margin-top: 40px;
+    
   }
 
   .nav-ctn {
@@ -265,7 +270,9 @@ body {
   }
 
   .ticket-filter {
-    margin-left: 20px;
+    height: 400px;
+    margin: 20px;
+    flex-basis: 44%;
   }
 
   .header {
