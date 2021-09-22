@@ -24,6 +24,16 @@ body {
   margin: auto;
 }
 
+.choose-demo-user-ctn {
+  color: white;
+  
+}
+
+.choose-demo-user {
+  cursor: pointer;
+  padding: 0;
+}
+
 .desktop-header {
   display: none;
 }

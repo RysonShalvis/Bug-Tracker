@@ -19,12 +19,12 @@ const ChooseDemoUser = (props) => {
     }
 
     return (
-        <div>
-            <h1 onClick={chooseUser}>Admin</h1>
-            <h1 onClick={chooseUser}>Project Manager</h1>
-            <h1 onClick={chooseUser}>Developer</h1>
-            <h1 onClick={chooseUser}>Submitter</h1>
-            <h1 onClick={props.goBack} >back</h1>
+        <div className="choose-demo-user-ctn">
+            <h1 className="choose-demo-user" onClick={chooseUser}>Admin</h1>
+            <h1 className="choose-demo-user" onClick={chooseUser}>Project Manager</h1>
+            <h1 className="choose-demo-user" onClick={chooseUser}>Developer</h1>
+            <h1 className="choose-demo-user" onClick={chooseUser}>Submitter</h1>
+            <h1 className="choose-demo-user" onClick={props.goBack} >back</h1>
         </div>
     )
 }

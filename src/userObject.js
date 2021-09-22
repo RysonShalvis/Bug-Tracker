@@ -21,6 +21,7 @@ const users = [
                 family_name: "Ryson",
                 nickname: "rysomadman",
                 name: "Free Runner Ryson",
+                team: 'Coders',
                 picture: "https://lh3.googleusercontent.com/a-/AOh14Gh26dWihKjDw38O53rlo3ZmwjQPM_KTcwROeJ2vQg=s96-c",
                 locale: "en",
                 updated_at: "2021-09-13T02:17:30.205Z",
@@ -42,6 +43,7 @@ const users = [
                 email: "johndeer@genericemail.com",
                 email_verified: true,
                 sub: "",
+                tickets: [0,2],
                 id: '2',
                 userType: 'developer'
         },
@@ -58,7 +60,8 @@ const users = [
                 email_verified: true,
                 sub: "",
                 id: '3',
-                userType: 'submitter'
+                userType: 'submitter',
+                submittedTickets: [1,3]
         }
     
 ]
