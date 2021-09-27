@@ -32,32 +32,16 @@ const Dashboard = (props) => {
     )
 
     const highPriorityGraph = {
-        position: 'relative',
-        width: '100px',
-        height: `${highPriority.length + 1}0px`,
-        backgroundColor: 'red',
-        
+        height: `${highPriority.length + 1}0px`
     }
     const mediumPriorityGraph = {
-        position: 'relative',
-        width: '100px',
-        height: `${mediumPriority.length + 1}0px`,
-        backgroundColor: 'red',
-        
+        height: `${mediumPriority.length + 1}0px`
     }
     const lowPriorityGraph = {
-        position: 'relative',
-        width: '100px',
-        height: `${lowPriority.length + 1}0px`,
-        backgroundColor: 'red',
-        
+        height: `${lowPriority.length + 1}0px`
     }
     const nonePriorityGraph = {
-        position: 'relative',
-        width: '100px',
-        height: `${nonePriority.length + 1 }0px`,
-        backgroundColor: 'red',
-        
+        height: `${nonePriority.length + 1 }0px`
     }
 
     
