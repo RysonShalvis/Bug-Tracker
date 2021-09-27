@@ -50,7 +50,7 @@ function Home (props) {
       } else if (props.userType === 'Project Manager') {
         let teamTickets = tickets.filter(a => a.team === users[1].team);
         setFilteredTickets(teamTickets);
-        console.log(teamTickets)
+        //console.log(teamTickets)
         setUserObject(users[1]);
 
       } else if (props.userType === 'Developer') {
@@ -67,7 +67,7 @@ function Home (props) {
           
         }
         setFilteredTickets(developerTickets);
-        console.log(developerTickets);
+        //console.log(developerTickets);
         
       } else if (props.userType === 'Submitter') {
         setUserObject(users[3]);
@@ -84,7 +84,7 @@ function Home (props) {
           
         }
         setFilteredTickets(submitterTickets);
-        console.log(submitterTickets);
+        //console.log(submitterTickets);
 
 
       } else {

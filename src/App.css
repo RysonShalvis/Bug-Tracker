@@ -289,9 +289,15 @@ body {
   }
 
   .ticket-filter {
+    display: flex;
+    align-items: flex-end;
     height: 400px;
     margin: 20px;
     flex-basis: 44%;
+  }
+
+  .priority-ticket {
+    margin: 10px;
   }
 
   .header {
