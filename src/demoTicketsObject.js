@@ -1,7 +1,7 @@
 const tickets = [
     {
         submitter: 'John Doe',
-        team: 'Cod',
+        team: 'Coders',
         project: 'Bug Tracker',
         ticketName: '',
         dateSubmitted: '',
@@ -45,6 +45,18 @@ const tickets = [
         status: 'in progress',
         type: 'fix',
         id: 3,
+        submitterComment: '' 
+    },
+    {
+        submitter: 'John Doe',
+        team: 'Coders',
+        project: 'Bug Tracker',
+        ticketName: '',
+        dateSubmitted: '',
+        priority: 1,
+        status: 'in progress',
+        type: '',
+        id: 4,
         submitterComment: '' 
     },
 ]

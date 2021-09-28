@@ -12,46 +12,75 @@ const Dashboard = (props) => {
     
 
     useEffect(() => {
-        //console.log(props.tickets)
+        
+        let highArr = [];
+        let mediumArr = [];
+        let lowArr = [];
+        let noneArr = [];
         let i;
         for (i = 0; i < props.tickets.length; i++) {
-            //console.log(props.tickets[i].priority);
             if (props.tickets[i].priority === 1) {
-                setHighPriority([...highPriority,props.tickets[i]]);
+                highArr.push(props.tickets[i]); 
             } else if (props.tickets[i].priority === 2) {
-                setMediumPriority([...mediumPriority,props.tickets[i]]);
+                mediumArr.push(props.tickets[i]);
+                
             } else if (props.tickets[i].priority === 3) {
-                console.log(i);
-                setLowPriority([...lowPriority,props.tickets[i]]);;
+                lowArr.push(props.tickets[i]);
             } else if (props.tickets[i].priority === 4) {
-                setNonePriority([...nonePriority,props.tickets[i]]);
+                noneArr.push(props.tickets[i]);
             }
         }
-        //console.log(mediumPriority)
+        setHighPriority(highArr);
+        setMediumPriority(mediumArr);
+        setLowPriority(lowArr);
+        setNonePriority(noneArr);
         }, []
     )
 
     const highPriorityGraph = {
-        height: `${highPriority.length + 1}0px`
+        height: `${highPriority.length * 4}0px`
     }
     const mediumPriorityGraph = {
-        height: `${mediumPriority.length + 1}0px`
+        height: `${mediumPriority.length * 4}0px`
     }
     const lowPriorityGraph = {
-        height: `${lowPriority.length + 1}0px`
+        height: `${lowPriority.length * 4}0px`
     }
     const nonePriorityGraph = {
-        height: `${nonePriority.length + 1 }0px`
+        height: `${nonePriority.length * 4}0px`
     }
 
     
     return (
         <div className="dashboard">
             <div  className="ticket-filter">
-                <div className="priority-ticket high" style={highPriorityGraph} ></div>
-                <div className="priority-ticket medium" style={mediumPriorityGraph} ></div>
-                <div className="priority-ticket low" style={lowPriorityGraph} ></div>
-                <div className="priority-ticket none" style={nonePriorityGraph} ></div>
+                <div className="ticket-name">Tickets by Priority</div>
+                <div className="height-indicators">
+                    <div className="height-indicators-number">0</div>
+                    <div className="height-indicators-number">1</div>
+                    <div className="height-indicators-number">2</div>
+                    <div className="height-indicators-number">3</div>
+                    <div className="height-indicators-number">4</div>
+                    <div className="height-indicators-number">5</div>
+                    <div className="height-indicators-number">6</div>
+                    <div className="height-indicators-number">7</div>
+                    <div className="height-indicators-number">8</div>
+                </div>
+                <div className="ticket-graph">
+                    <div className="priority-ticket high" style={highPriorityGraph} ></div>
+                    <div className="priority-ticket medium" style={mediumPriorityGraph} ></div>
+                    <div className="priority-ticket low" style={lowPriorityGraph} ></div>
+                    <div className="priority-ticket none" style={nonePriorityGraph} ></div>
+                </div>
+                <div className="horizontal-line"></div>
+                <div className="vertical-line"></div>
+                <div className="ticket-priority-name-ctn">
+                <div className="ticket-priortiy-name">High <br/>Priority</div>
+                <div className="ticket-priortiy-name">Medium <br/>Priority</div>
+                <div className="ticket-priortiy-name">Low <br/>Priority</div>
+                <div className="ticket-priortiy-name">No <br/>Priority</div>
+                </div>
+                
                 
             </div>
             <div className="ticket-filter">
