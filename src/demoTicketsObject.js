@@ -7,7 +7,7 @@ const tickets = [
         dateSubmitted: '',
         priority: 1,
         status: 'in progress',
-        type: '',
+        type: 'fix',
         id: 0,
         submitterComment: '' 
     },
@@ -55,7 +55,7 @@ const tickets = [
         dateSubmitted: '',
         priority: 1,
         status: 'in progress',
-        type: '',
+        type: 'delete',
         id: 4,
         submitterComment: '' 
     },
