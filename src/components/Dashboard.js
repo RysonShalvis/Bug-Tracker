@@ -83,15 +83,97 @@ const Dashboard = (props) => {
                 
                 
             </div>
-            <div className="ticket-filter">
-
-            </div>
-            <div className="ticket-filter">
+            <div  className="ticket-filter">
+                <div className="ticket-name">Tickets by Type</div>
+                <div className="height-indicators">
+                    <div className="height-indicators-number">0</div>
+                    <div className="height-indicators-number">1</div>
+                    <div className="height-indicators-number">2</div>
+                    <div className="height-indicators-number">3</div>
+                    <div className="height-indicators-number">4</div>
+                    <div className="height-indicators-number">5</div>
+                    <div className="height-indicators-number">6</div>
+                    <div className="height-indicators-number">7</div>
+                    <div className="height-indicators-number">8</div>
+                </div>
+                <div className="ticket-graph">
+                    <div className="priority-ticket high" style={highPriorityGraph} ></div>
+                    <div className="priority-ticket medium" style={mediumPriorityGraph} ></div>
+                    <div className="priority-ticket low" style={lowPriorityGraph} ></div>
+                    <div className="priority-ticket none" style={nonePriorityGraph} ></div>
+                </div>
+                <div className="horizontal-line"></div>
+                <div className="vertical-line"></div>
+                <div className="ticket-priority-name-ctn">
+                <div className="ticket-priortiy-name">High <br/>Priority</div>
+                <div className="ticket-priortiy-name">Medium <br/>Priority</div>
+                <div className="ticket-priortiy-name">Low <br/>Priority</div>
+                <div className="ticket-priortiy-name">No <br/>Priority</div>
+                </div>
+                
                 
             </div>
-            <div className="ticket-filter">
+            <div  className="ticket-filter">
+                <div className="ticket-name">Tickets by Status</div>
+                <div className="height-indicators">
+                    <div className="height-indicators-number">0</div>
+                    <div className="height-indicators-number">1</div>
+                    <div className="height-indicators-number">2</div>
+                    <div className="height-indicators-number">3</div>
+                    <div className="height-indicators-number">4</div>
+                    <div className="height-indicators-number">5</div>
+                    <div className="height-indicators-number">6</div>
+                    <div className="height-indicators-number">7</div>
+                    <div className="height-indicators-number">8</div>
+                </div>
+                <div className="ticket-graph">
+                    <div className="priority-ticket high" style={highPriorityGraph} ></div>
+                    <div className="priority-ticket medium" style={mediumPriorityGraph} ></div>
+                    <div className="priority-ticket low" style={lowPriorityGraph} ></div>
+                    <div className="priority-ticket none" style={nonePriorityGraph} ></div>
+                </div>
+                <div className="horizontal-line"></div>
+                <div className="vertical-line"></div>
+                <div className="ticket-priority-name-ctn">
+                <div className="ticket-priortiy-name">High <br/>Priority</div>
+                <div className="ticket-priortiy-name">Medium <br/>Priority</div>
+                <div className="ticket-priortiy-name">Low <br/>Priority</div>
+                <div className="ticket-priortiy-name">No <br/>Priority</div>
+                </div>
+                
                 
             </div>
+            <div  className="ticket-filter">
+                <div className="ticket-name">Tickets by still user</div>
+                <div className="height-indicators">
+                    <div className="height-indicators-number">0</div>
+                    <div className="height-indicators-number">1</div>
+                    <div className="height-indicators-number">2</div>
+                    <div className="height-indicators-number">3</div>
+                    <div className="height-indicators-number">4</div>
+                    <div className="height-indicators-number">5</div>
+                    <div className="height-indicators-number">6</div>
+                    <div className="height-indicators-number">7</div>
+                    <div className="height-indicators-number">8</div>
+                </div>
+                <div className="ticket-graph">
+                    <div className="priority-ticket high" style={highPriorityGraph} ></div>
+                    <div className="priority-ticket medium" style={mediumPriorityGraph} ></div>
+                    <div className="priority-ticket low" style={lowPriorityGraph} ></div>
+                    <div className="priority-ticket none" style={nonePriorityGraph} ></div>
+                </div>
+                <div className="horizontal-line"></div>
+                <div className="vertical-line"></div>
+                <div className="ticket-priority-name-ctn">
+                <div className="ticket-priortiy-name">High <br/>Priority</div>
+                <div className="ticket-priortiy-name">Medium <br/>Priority</div>
+                <div className="ticket-priortiy-name">Low <br/>Priority</div>
+                <div className="ticket-priortiy-name">No <br/>Priority</div>
+                </div>
+                
+                
+            </div>
+            
         </div>
     )
 }
