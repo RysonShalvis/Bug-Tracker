@@ -128,7 +128,7 @@ function Home (props) {
           
         <div >
   
-        <NavBar createTicketNav={ticketIsClicked} dashboardClicked={navToDashboard} createTicketClicked={navToCreateTicket} user={userObject} opened={opened} />
+        <NavBar onClick={handleClick} createTicketNav={ticketIsClicked} dashboardClicked={navToDashboard} createTicketClicked={navToCreateTicket} user={userObject} opened={opened} />
         </div>
         
         <div className={`main main${opened}`}>

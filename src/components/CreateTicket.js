@@ -3,7 +3,23 @@ import React from 'react'
 const CreateTicket = () => {
     return (
         <div className="create-ticket-ctn">
-            <h1>Hello this is cerate a ticket</h1>
+            <div className="create-ticket-name">Create Ticket</div>
+            <div className="input-ctn">
+                <label htmlFor="" className="input-label">Name</label>
+                <input type="text" className="input" />
+            </div>
+            <div className="input-ctn">
+                <label htmlFor="" className="input-label">Name</label>
+                <input type="text" className="input" />
+            </div>
+            <div className="input-ctn">
+                <label htmlFor="" className="input-label">Name</label>
+                <input type="text" className="input" />
+            </div>
+            <div className="input-ctn">
+                <label htmlFor="" className="input-label">Name</label>
+                <input type="text" className="input" />
+            </div>
         </div>
     )
 }

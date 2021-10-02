@@ -48,7 +48,30 @@ body {
 }
 
 .create-ticket-ctn {
+  background-color: rgb(38,41,61);
+  margin: 10px;
+  padding: 10px;
   color: white;
+}
+
+.input-ctn {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.input-label {
+
+}
+
+.input {
+  height: 30px;
+  background-color: rgba(0,0,0,0);
+  border-style: solid;
+  border-color: rgb(46, 46, 78);
+  border-radius: 5px;
+  border-width: 1px;
+  margin: 5px 0;
 }
 
 .maintrue {

@@ -5,6 +5,16 @@ import dashboardIcon from '../dashboard-icon.png';
 
 const NavBar = (props) => {
     const { logout } = useAuth0();
+
+    const navToDashboard = () => {
+        props.onClick();
+        props.dashboardClicked();
+    }
+
+    const navToCreateTicket = () => {
+        props.onClick();
+        props.createTicketClicked();
+    }
     
 
     return (
@@ -18,23 +28,23 @@ const NavBar = (props) => {
                 </div>
                 <div className="underline"></div>
                 <div className="nav-bar-wrapper">
-                    <div className="nav-link" onClick={props.dashboardClicked}>
+                    <div className="nav-link" onClick={props.onClick} onClick={navToDashboard}>
                         <img src={dashboardIcon} alt="icon" className="nav-icon" />
                         <div className="nav-name">Dashboard</div>
                     </div>
-                    <div className="nav-link">
+                    <div onClick={navToDashboard} className="nav-link">
                         <img src={dashboardIcon} alt="icon" className="nav-icon" />
                         <div className="nav-name">Dashboard</div>
                     </div>
-                    <div onClick={props.createTicketClicked} className="nav-link">
+                    <div onClick={navToCreateTicket} className="nav-link">
                         <img src={dashboardIcon} alt="icon" className="nav-icon" />
                         <div  className="nav-name">Create Ticket</div>
                     </div>
-                    <div className="nav-link">
+                    <div onClick={navToDashboard} className="nav-link">
                         <img src={dashboardIcon} alt="icon" className="nav-icon" />
                         <div className="nav-name">Dashboard</div>
                     </div>
-                    <div className="nav-link">
+                    <div onClick={navToDashboard} className="nav-link">
                         <img src={dashboardIcon} alt="icon" className="nav-icon" />
                         <div className="nav-name">Dashboard</div>
                     </div>
