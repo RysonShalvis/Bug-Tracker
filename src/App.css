@@ -47,6 +47,10 @@ body {
   
 }
 
+.create-ticket-ctn {
+  color: white;
+}
+
 .maintrue {
   transition: all .5s;
   

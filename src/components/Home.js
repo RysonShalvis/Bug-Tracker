@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import users from '../userObject';
 import tickets from'../demoTicketsObject';
+import CurrentTab from './CurrentTab';
 function Home (props) {
 
   const [opened, setOpened] = useState(false);
@@ -13,6 +14,15 @@ function Home (props) {
   const [userObject, setUserObject] = useState(false);
   const { user, isAuthenticated } = useAuth0();
   const [filteredTickets, setFilteredTickets] = useState([]); 
+  const [ticketIsClicked, setTicketIsClicked] = useState('dashboard');
+
+    const navToCreateTicket = () => {
+        setTicketIsClicked('create ticket');
+    }
+
+    const navToDashboard = () => {
+      setTicketIsClicked('dashboard');
+  }
 
   const createUser = (newUser) => {
     return {
@@ -118,13 +128,14 @@ function Home (props) {
           
         <div >
   
-        <NavBar user={userObject} opened={opened} />
+        <NavBar createTicketNav={ticketIsClicked} dashboardClicked={navToDashboard} createTicketClicked={navToCreateTicket} user={userObject} opened={opened} />
         </div>
         
         <div className={`main main${opened}`}>
-          <DesktopHeader user={userObject} />
-          <Header user={userObject} opened={opened} onClick={handleClick} />
-          <Dashboard tickets={filteredTickets} user={userObject}/>
+          <DesktopHeader createTicketNav={ticketIsClicked} user={userObject} />
+          <Header createTicketNav={ticketIsClicked} user={userObject} opened={opened} onClick={handleClick} />
+          <CurrentTab nav={ticketIsClicked} tickets={filteredTickets} user={userObject}/>
+          
         </div>
     </div>
       

@@ -195,7 +195,7 @@ const Dashboard = (props) => {
                 
             </div>
             <div  className="ticket-filter">
-                <div className="ticket-name">Tickets by still user</div>
+                <div className="ticket-name">Tickets by User</div>
                 <div className="height-indicators">
                     <div className="height-indicators-number">0</div>
                     <div className="height-indicators-number">1</div>
